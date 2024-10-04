@@ -21,7 +21,7 @@ const Header = () => {
             Home
           </Link>
           <Link
-            href=""
+            href="#skills"
             className="text-md font-semibold text-[#d4d4d4] transition duration-100 hover:text-[#acdbac] active:text-[#acdbac]"
           >
             Skills
