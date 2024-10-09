@@ -10,7 +10,7 @@ import bootstrap_icon from "@/public/logos_bootstrap.svg";
 import sass_icon from "@/public/logos_sass.svg";
 import laptop_img from "@/public/laptop_image.svg";
 import chain_img from "@/public/chain_icon.svg";
-import github_icon from '@/public/github_logo.svg';
+import github_icon from '@/public/github_icon_small.svg';
 
 const techStackIcons = [
   {

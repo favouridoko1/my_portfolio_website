@@ -13,7 +13,7 @@ const Header = () => {
         <li className="text-[#d4d4d4] font-bold text-xl">
           <span className="text-[#727272]">FAVOUR</span>IDOKO
         </li>
-        <li className="flex gap-4">
+        <li className="hidden md:flex gap-4 ">
           <Link
             href=""
             className="text-md font-semibold text-[#d4d4d4] transition duration-100 hover:text-[#acdbac] active:text-[#acdbac]"
@@ -27,13 +27,13 @@ const Header = () => {
             Skills
           </Link>
           <Link
-            href=""
+            href="#about_me"
             className="text-md font-semibold text-[#d4d4d4] transition duration-100 hover:text-[#acdbac] active:text-[#acdbac]"
           >
             About
           </Link>
           <Link
-            href=""
+            href="#projects"
             className="text-md font-semibold text-[#d4d4d4] transition duration-100 hover:text-[#acdbac] active:text-[#acdbac]"
           >
             Projects
