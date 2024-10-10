@@ -67,11 +67,11 @@ const Cards: React.FC<CardProps> = () => {
                 className="rounded-lg"
               />
               <p className="text-sm">{items.description}</p>
-              <ul className="flex">
+              <ul className="flex justify-between p-x mt-2">
                 <li>
                   <a
                     href={items.live_url}
-                    className="flex"
+                    className="flex gap-2"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -83,7 +83,7 @@ const Cards: React.FC<CardProps> = () => {
                   <a
                     href={items.github_repository}
                     target="_blank"
-                    className="flex"
+                    className="flex gap-2"
                   >
                     <Image src={items.github_icon} alt="Github icon" />
                     GitHub

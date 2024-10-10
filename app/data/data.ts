@@ -96,56 +96,56 @@ const myProjectsData = [
     live_url: "https://flixx-movie-app-jade.vercel.app",
     github_repository: "https:///github.com/favouridoko1/flixx-movie-app",
   },
-  {
-    id: 4,
-    laptop_url: laptop_img,
-    chain_icon: chain_img,
-    github_icon: github_icon,
-    description:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    live_url: "https://flixx-movie-app-jade.vercel.app",
-    github_repository: "https:///github.com/favouridoko1/flixx-movie-app",
-  },
-  {
-    id: 5,
-    laptop_url: laptop_img,
-    chain_icon: chain_img,
-    github_icon: github_icon,
-    description:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    live_url: "https://flixx-movie-app-jade.vercel.app",
-    github_repository: "https:///github.com/favouridoko1/flixx-movie-app",
-  },
-  {
-    id: 6,
-    laptop_url: laptop_img,
-    chain_icon: chain_img,
-    github_icon: github_icon,
-    description:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    live_url: "https://flixx-movie-app-jade.vercel.app",
-    github_repository: "https:///github.com/favouridoko1/flixx-movie-app",
-  },
-  {
-    id: 8,
-    laptop_url: laptop_img,
-    chain_icon: chain_img,
-    github_icon: github_icon,
-    description:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    live_url: "https://flixx-movie-app-jade.vercel.app",
-    github_repository: "https:///github.com/favouridoko1/flixx-movie-app",
-  },
-  {
-    id: 9,
-    laptop_url: laptop_img,
-    chain_icon: chain_img,
-    github_icon: github_icon,
-    description:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    live_url: "https://flixx-movie-app-jade.vercel.app",
-    github_repository: "https:///github.com/favouridoko1/flixx-movie-app",
-  },
+  // {
+  //   id: 4,
+  //   laptop_url: laptop_img,
+  //   chain_icon: chain_img,
+  //   github_icon: github_icon,
+  //   description:
+  //     "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+  //   live_url: "https://flixx-movie-app-jade.vercel.app",
+  //   github_repository: "https:///github.com/favouridoko1/flixx-movie-app",
+  // },
+  // {
+  //   id: 5,
+  //   laptop_url: laptop_img,
+  //   chain_icon: chain_img,
+  //   github_icon: github_icon,
+  //   description:
+  //     "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+  //   live_url: "https://flixx-movie-app-jade.vercel.app",
+  //   github_repository: "https:///github.com/favouridoko1/flixx-movie-app",
+  // },
+  // {
+  //   id: 6,
+  //   laptop_url: laptop_img,
+  //   chain_icon: chain_img,
+  //   github_icon: github_icon,
+  //   description:
+  //     "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+  //   live_url: "https://flixx-movie-app-jade.vercel.app",
+  //   github_repository: "https:///github.com/favouridoko1/flixx-movie-app",
+  // },
+  // {
+  //   id: 8,
+  //   laptop_url: laptop_img,
+  //   chain_icon: chain_img,
+  //   github_icon: github_icon,
+  //   description:
+  //     "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+  //   live_url: "https://flixx-movie-app-jade.vercel.app",
+  //   github_repository: "https:///github.com/favouridoko1/flixx-movie-app",
+  // },
+  // {
+  //   id: 9,
+  //   laptop_url: laptop_img,
+  //   chain_icon: chain_img,
+  //   github_icon: github_icon,
+  //   description:
+  //     "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+  //   live_url: "https://flixx-movie-app-jade.vercel.app",
+  //   github_repository: "https:///github.com/favouridoko1/flixx-movie-app",
+  // },
 ];
 
 export { techStackIcons, myProjectsData };
