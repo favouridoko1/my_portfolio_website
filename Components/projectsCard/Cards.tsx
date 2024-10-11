@@ -22,7 +22,14 @@ interface CardProps {
   github_repository: string;
 }
 
-const Cards: React.FC<CardProps> = () => {
+const Cards: React.FC<CardProps> = ({
+  id,
+  laptop_img,
+  chain_icon,
+  github_icon,
+  description,
+  github_repository,
+}) => {
   const [showOverLay, setShowOverLay] = useState<null | Boolean>(false);
   let [ref, bounds] = useMeasure();
   const width = bounds.width;
@@ -41,60 +48,13 @@ const Cards: React.FC<CardProps> = () => {
       repeatDelay: 0,
     });
 
-    return () => control.stop(); // Cleanup animation on unmount
+    return () => control.stop(); // Cleanup animation on unmoun
   }, [xTransition, width]);
 
   return (
-    <motion.section
-      className="p-8"
-      onHoverStart={() => setShowOverLay(true)}
-      onHoverEnd={() => setShowOverLay(false)}
-    >
-      <section
-        ref={ref}
-        className="flex gap-4 relative overflow-hidden"
-        style={{ x: xTransition }}
-      >
-        <AnimatePresence>
-          {[...myProjectsData].map((items) => (
-            <motion.ul
-              className="gap-4 p-4 bg-[#4d4c4c] rounded-md transform transition-transform duration-1000 hover:scale-105"
-              key={items.id}
-            >
-              <Image
-                src={laptop_img}
-                alt="Laptop image for project preview"
-                className="rounded-lg"
-              />
-              <p className="text-sm">{items.description}</p>
-              <ul className="flex justify-between p-x mt-2">
-                <li>
-                  <a
-                    href={items.live_url}
-                    className="flex gap-2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image src={items.chain_icon} alt="Chain icon" />
-                    Demo
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={items.github_repository}
-                    target="_blank"
-                    className="flex gap-2"
-                  >
-                    <Image src={items.github_icon} alt="Github icon" />
-                    GitHub
-                  </a>
-                </li>
-              </ul>
-            </motion.ul>
-          ))}
-        </AnimatePresence>
-      </section>
-    </motion.section>
+    <section>
+      <Image src={} alt="" />
+    </section>
   );
 };
 

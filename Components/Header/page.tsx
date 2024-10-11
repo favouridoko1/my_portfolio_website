@@ -2,16 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { CiLinkedin } from "react-icons/ci";
 import { GrLinkedinOption } from "react-icons/gr";
-import menu_icon from '@/public/menu_icon.svg'
-import linkedIn_icon from '@/public/linkedin_icon.svg'
-import github_icon from '@/public/github_logo.svg'
+import menu_icon from "@/public/menu_icon.svg";
+import linkedIn_icon from "@/public/linkedin_icon.svg";
+import github_icon from "@/public/github_logo.svg";
 
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-20">
       <ul className="border-b border-[#292929] py-4 flex justify-around items-center bg-[#2b2b2b]">
         <li className="text-[#f6f6f6] font-bold text-xl">
-        FAVOUR<span className="text-[#EAB308]">IDOKO</span>
+          <Link href="/">
+            FAVOUR<span className="text-[#EAB308]">IDOKO</span>
+          </Link>
         </li>
         <li className="hidden md:flex gap-4 ">
           <Link
@@ -46,7 +48,9 @@ const Header = () => {
           </Link>
         </li>
         <li className="flex gap-5">
-          <Link href="https://www.linkedin.com/in/favour-idoko-12760b2b5/" target="_blank"
+          <Link
+            href="https://www.linkedin.com/in/favour-idoko-12760b2b5/"
+            target="_blank"
             className="hidden sm:flex gap-1 items-center text-md font-semibold text-[#9CA3AF] transition duration-100 hover:text-[#acdbac] active:text-[#acdbac]"
           >
             {" "}
@@ -54,7 +58,8 @@ const Header = () => {
             LinkedIn
           </Link>
           <Link
-            href="https://github.com/favouridoko1" target="_blank"
+            href="https://github.com/favouridoko1"
+            target="_blank"
             className="hidden sm:flex gap-1 items-center text-md font-semibold text-[#9CA3AF] transition duration-100 hover:text-[#acdbac] active:text-[#acdbac]"
           >
             <Image src={github_icon} alt="" />

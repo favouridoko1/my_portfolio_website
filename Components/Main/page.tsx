@@ -2,7 +2,7 @@ import animaImage from "@/public/profile_pic1.svg";
 import Image from "next/image";
 import { techStackIcons } from "@/app/data/data";
 import Cards from "../projectsCard/Cards";
-import Scroll from "../Scroll_effect/scroll_effect";
+import { myProjectsData } from "@/app/data/data";
 
 interface StackImages {
   id: number;
@@ -14,8 +14,10 @@ const Main = () => {
   return (
     <section className="">
       <nav className="mx-auto text-[#fff] flex flex-col lg:flex-row items-center justify-around my-14 ">
-        <section className="text-center sm:text-left w-4/5 sm:w-2/4">
-          <h3 className="text-2xl font-bold text-[#EAB308]">Hello, I am Favour Idoko,</h3>
+        <section className="text-center sm:text-left w-4/5 sm:w-2/4 mt-11">
+          <h3 className="text-2xl font-bold text-[#EAB308]">
+            Hello, I am Favour Idoko,
+          </h3>
           <p className="text-4xl font-bold text-nowrap">Frontend Developer</p>
           <p className="text-sm lg:max-w-96 my-2 text-[#afadad]">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
@@ -26,7 +28,7 @@ const Main = () => {
             Download Resume
           </button>
         </section>
-        <section className="my-7">
+        <section className="sm:my-7">
           <Image
             src={animaImage}
             alt="Animaa image"
@@ -61,10 +63,14 @@ const Main = () => {
         <p className="text-center text-md text-lg mb-0">
           Things I’ve built so far
         </p>
-        <ul className="">
-          <Cards />
-          {/* <Scroll/> */}
-        </ul>
+        <main className="py-8">
+          <div className="absolute left-0 flex gap-4">
+            {[...myProjectsData].map((item, index)=>(
+              <Cards/>
+            ))}
+           
+          </div>
+        </main>
       </section>
       <section
         className="my-16 text-[#fff] flex justify-center items-center flex-col"
@@ -72,14 +78,14 @@ const Main = () => {
       >
         <h1 className=" font-bold text-3xl mb-2">ABOUT ME</h1>
         <p className="w-3/4 p-8 bg-[#080808] rounded-lg">
-          Hello! I’m Favour Idoko, a passionate frontend developer with
-          a knack for creating visually stunning and user-friendly websites.
-          With a background in [Your Background, e.g., design, computer
-          science], I bring a unique blend of creativity and technical expertise
-          to every project. I specialize in HTML, CSS, and JavaScript, and I
-          have experience with popular frameworks like React and Vue.js. My goal
-          is to build responsive and accessible web applications that enhance
-          user experience and drive engagement. I thrive in collaborative
+          Hello! I’m Favour Idoko, a passionate frontend developer with a knack
+          for creating visually stunning and user-friendly websites. With a
+          background in [Your Background, e.g., design, computer science], I
+          bring a unique blend of creativity and technical expertise to every
+          project. I specialize in HTML, CSS, and JavaScript, and I have
+          experience with popular frameworks like React and Vue.js. My goal is
+          to build responsive and accessible web applications that enhance user
+          experience and drive engagement. I thrive in collaborative
           environments and enjoy working with designers and backend developers
           to bring ideas to life. In my spare time, you can find me exploring
           the latest web technologies, contributing to open-source projects, or
