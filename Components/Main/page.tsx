@@ -8,6 +8,8 @@ import profile_rectangle from "@/public/profile_rectangle.svg";
 import useMeasure from "react-use-measure";
 import { motion, animate, useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
+import Contact_me from "../Contact_me/Contact_me";
+import History from '../../../valubox-fend/valubox-fend/src/app/(dashboard)/history/page';
 
 interface StackImages {
   id: number;
@@ -30,11 +32,10 @@ const Main = () => {
       controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
         ease: "linear",
         duration: duration * (1 - xTranslation.get() / finalPosition),
-        onComplete: ()=> {
-          setMustFinish(false)
-          setReRender(!reRender)
-        }
-        
+        onComplete: () => {
+          setMustFinish(false);
+          setReRender(!reRender);
+        },
       });
     } else {
       controls = animate(xTranslation, [0, finalPosition], {
@@ -57,15 +58,13 @@ const Main = () => {
           </h3>
           <p className="text-4xl font-bold text-nowrap">Frontend Developer</p>
           <p className="text-sm lg:max-w-96 my-2 text-[#afadad]">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.
+            I design and write maintanable clean, elegant and efficient code
           </p>
           <button className=" my-1 p-2 font-medium rounded-lg transition hover:bg-[#f8d95e] bg-[#FACC15] active:bg-[#e9c537] text-[#0f0f0f]">
             Download Resume
           </button>
         </section>
-        <section className="sm:my-7">
+        <section className="sm:my-7 ">
           <Image
             src={animaImage}
             alt="Animaa image"
@@ -95,22 +94,33 @@ const Main = () => {
           ))}
         </ul>
       </section>
-      <section className="my-16 text-[#fff]" id="projects">
+      <section className="my-16 text-[#fff] " id="projects">
         <h3 className="text-center font-bold text-3xl ">PROJECTS</h3>
         <p className="text-center text-md text-lg mb-0">
           Things I’ve built so far
         </p>
         <main className="py-8">
           <motion.div
-            className="absolute left-0 flex gap-4 "
+            className="absolute left-0 flex gap-6 "
             ref={ref}
             style={{ x: xTranslation }}
-            onHoverStart={() => {setMustFinish(true); setDuration(SLOW_DURATION)}}
-            onHoverEnd={() => {setMustFinish(true); setDuration(FAST_DURATION)}}
+            onHoverStart={() => {
+              setMustFinish(true);
+              setDuration(SLOW_DURATION);
+            }}
+            onHoverEnd={() => {
+              setMustFinish(true);
+              setDuration(FAST_DURATION);
+            }}
           >
-            {[...myProjectsData, ...myProjectsData].map((item, index) => (
-              <Cards laptop_img={item.laptop_url} key={index} />
-            ))}
+            {/* {[...myProjectsData, ...myProjectsData].map((item, index) => (
+              <Cards
+                laptop_img={item.laptop_url}
+                chain_icon={item.chain_icon}
+                description={item.description}
+                key={item.id}
+              />
+            ))} */}
           </motion.div>
         </main>
       </section>
@@ -118,7 +128,7 @@ const Main = () => {
         className="my-16 text-[#fff] flex justify-center items-center flex-col"
         id="about_me"
       >
-        <h1 className=" font-bold text-3xl my-4">
+        <h1 className="font-bold text-3xl my-4">
           ABOUT <span className="text-[#EAB308]">ME</span>
         </h1>
         <div className="w-full mx-auto p-8 bg-[#080808] justify-center items-center md:flex">
@@ -129,16 +139,31 @@ const Main = () => {
               className="w-[55%]"
             />
           </figure>
-          <div className="md:w-6/12 flex flex-col items-center py-2 md:py-0">
+          <article className="md:w-6/12 flex flex-col items-center py-2 md:py-0">
             <p className="w-[60%] justify-self-center md:w-[90%] ">
-              Hello! I’m Favour Idoko, a passionate frontend developer with a
-              knack for creating visually stunning and user-friendly websites.
-              Yo, you can find me exploring the latest web technologies,
-              contributing to open-source projects, or honing my skills in
-              design.
+              I'm a passionate, self-proclaimed designer who specializes in full
+              stack development (React.js & Node.js). I am very enthusiastic
+              about bringing the technical and visual aspects of digital
+              products to life. User experience, pixel perfect design, and
+              writing clear, readable, highly performant code matters to me.
+              <br />I began my journey as a web developer in 2023, and since
+              then, I've continued to grow and evolve as a developer, taking on
+              new challenges and learning the latest technologies along the way.
+              with over 1 years after starting my web development journey, I'm
+              building cutting-edge web applications using modern technologies
+              such as Next.js, TypeScript, Nestjs, Tailwindcss, Supabase and
+              much more. When I'm not in full-on developer mode, you can find me
+              hovering around on twitter or on indie hacker, witnessing the
+              journey of early startups or enjoying some free time. You can
+              follow me on Twitter where I share tech-related bites and build in
+              public, or you can follow me on GitHub
             </p>
-          </div>
+          </article>
         </div>
+      </section>
+      <section className="w-full" id="contact_me">
+        <h1 className="font-bold text-3xl my-4 text-center text-[#fff]">CONTACT <span className="text-[#EAB308]">ME</span></h1>
+        <Contact_me />
       </section>
     </section>
   );

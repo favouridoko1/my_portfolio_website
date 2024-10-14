@@ -41,7 +41,7 @@ const Header = () => {
             Projects
           </Link>
           <Link
-            href=""
+            href="#contact_me"
             className="text-md font-semibold text-[#9CA3AF] transition duration-100 hover:text-[#acdbac] active:text-[#acdbac]"
           >
             Contact
