@@ -1,8 +1,13 @@
+"use client";
 import animaImage from "@/public/profile_pic1.svg";
 import Image from "next/image";
 import { techStackIcons } from "@/app/data/data";
 import Cards from "../projectsCard/Cards";
 import { myProjectsData } from "@/app/data/data";
+import profile_rectangle from "@/public/profile_rectangle.svg";
+import useMeasure from "react-use-measure";
+import { motion, animate, useMotionValue } from "framer-motion";
+import { useEffect, useState } from "react";
 
 interface StackImages {
   id: number;
@@ -11,6 +16,38 @@ interface StackImages {
 }
 
 const Main = () => {
+  let [ref, { width }] = useMeasure();
+  const xTranslation = useMotionValue(0);
+  let FAST_DURATION = 25;
+  let SLOW_DURATION = 75;
+  const [duration, setDuration] = useState(FAST_DURATION);
+  const [mustFinish, setMustFinish] = useState<boolean>(false);
+  const [reRender, setReRender] = useState<boolean>(false);
+  useEffect(() => {
+    let controls;
+    let finalPosition = -width / 2 - 8;
+    if (mustFinish) {
+      controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
+        ease: "linear",
+        duration: duration * (1 - xTranslation.get() / finalPosition),
+        onComplete: ()=> {
+          setMustFinish(false)
+          setReRender(!reRender)
+        }
+        
+      });
+    } else {
+      controls = animate(xTranslation, [0, finalPosition], {
+        ease: "linear",
+        duration: duration,
+        repeat: Infinity,
+        repeatType: "loop",
+        repeatDelay: 0,
+      });
+    }
+    return controls?.stop;
+  }, [xTranslation, width, duration, reRender]);
+
   return (
     <section className="">
       <nav className="mx-auto text-[#fff] flex flex-col lg:flex-row items-center justify-around my-14 ">
@@ -64,36 +101,44 @@ const Main = () => {
           Things I’ve built so far
         </p>
         <main className="py-8">
-          <div className="absolute left-0 flex gap-4">
-            {[...myProjectsData].map((item, index)=>(
-              <Cards/>
+          <motion.div
+            className="absolute left-0 flex gap-4 "
+            ref={ref}
+            style={{ x: xTranslation }}
+            onHoverStart={() => {setMustFinish(true); setDuration(SLOW_DURATION)}}
+            onHoverEnd={() => {setMustFinish(true); setDuration(FAST_DURATION)}}
+          >
+            {[...myProjectsData, ...myProjectsData].map((item, index) => (
+              <Cards laptop_img={item.laptop_url} key={index} />
             ))}
-           
-          </div>
+          </motion.div>
         </main>
       </section>
       <section
         className="my-16 text-[#fff] flex justify-center items-center flex-col"
         id="about_me"
       >
-        <h1 className=" font-bold text-3xl mb-2">ABOUT ME</h1>
-        <p className="w-3/4 p-8 bg-[#080808] rounded-lg">
-          Hello! I’m Favour Idoko, a passionate frontend developer with a knack
-          for creating visually stunning and user-friendly websites. With a
-          background in [Your Background, e.g., design, computer science], I
-          bring a unique blend of creativity and technical expertise to every
-          project. I specialize in HTML, CSS, and JavaScript, and I have
-          experience with popular frameworks like React and Vue.js. My goal is
-          to build responsive and accessible web applications that enhance user
-          experience and drive engagement. I thrive in collaborative
-          environments and enjoy working with designers and backend developers
-          to bring ideas to life. In my spare time, you can find me exploring
-          the latest web technologies, contributing to open-source projects, or
-          honing my skills in design. I believe in continuous learning and am
-          always seeking new challenges that push my boundaries and expand my
-          knowledge. I’m excited to connect and explore how I can help bring
-          your vision to life!
-        </p>
+        <h1 className=" font-bold text-3xl my-4">
+          ABOUT <span className="text-[#EAB308]">ME</span>
+        </h1>
+        <div className="w-full mx-auto p-8 bg-[#080808] justify-center items-center md:flex">
+          <figure className="md:w-6/12 flex flex-col items-center">
+            <Image
+              src={profile_rectangle}
+              alt={profile_rectangle}
+              className="w-[55%]"
+            />
+          </figure>
+          <div className="md:w-6/12 flex flex-col items-center py-2 md:py-0">
+            <p className="w-[60%] justify-self-center md:w-[90%] ">
+              Hello! I’m Favour Idoko, a passionate frontend developer with a
+              knack for creating visually stunning and user-friendly websites.
+              Yo, you can find me exploring the latest web technologies,
+              contributing to open-source projects, or honing my skills in
+              design.
+            </p>
+          </div>
+        </div>
       </section>
     </section>
   );

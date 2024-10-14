@@ -51,7 +51,7 @@ const Header = () => {
           <Link
             href="https://www.linkedin.com/in/favour-idoko-12760b2b5/"
             target="_blank"
-            className="hidden sm:flex gap-1 items-center text-md font-semibold text-[#9CA3AF] transition duration-100 hover:text-[#acdbac] active:text-[#acdbac]"
+            className="hidden md:flex gap-1 items-center text-md font-semibold text-[#9CA3AF] transition duration-100 hover:text-[#acdbac] active:text-[#acdbac]"
           >
             {" "}
             <Image src={linkedIn_icon} alt="linkedin" />
@@ -60,14 +60,14 @@ const Header = () => {
           <Link
             href="https://github.com/favouridoko1"
             target="_blank"
-            className="hidden sm:flex gap-1 items-center text-md font-semibold text-[#9CA3AF] transition duration-100 hover:text-[#acdbac] active:text-[#acdbac]"
+            className="hidden md:flex gap-1 items-center text-md font-semibold text-[#9CA3AF] transition duration-100 hover:text-[#acdbac] active:text-[#acdbac]"
           >
             <Image src={github_icon} alt="" />
             Github
           </Link>
         </li>
-        <li className=" sm:hidden">
-          <Image src={menu_icon} alt="" className=" block sm:hidden" />
+        <li className="">
+          <Image src={menu_icon} alt="" className=" block md:hidden" />
         </li>
       </ul>
     </header>

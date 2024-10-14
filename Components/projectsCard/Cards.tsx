@@ -52,9 +52,9 @@ const Cards: React.FC<CardProps> = ({
   }, [xTransition, width]);
 
   return (
-    <section>
-      <Image src={} alt="" />
-    </section>
+    <motion.section className="relative overflow-hidden h-[250px] rounded-lg min-w-[300px] flex justify-center items-center">
+      <Image src={laptop_img} alt={laptop_img} fill style={{objectFit:"cover"}} />
+    </motion.section>
   );
 };
 
