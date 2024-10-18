@@ -10,6 +10,7 @@ import { motion, animate, useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
 import Contact_me from "../Contact_me/Contact_me";
 import History from '../../../valubox-fend/valubox-fend/src/app/(dashboard)/history/page';
+import Link from "next/link";
 
 interface StackImages {
   id: number;
@@ -60,9 +61,9 @@ const Main = () => {
           <p className="text-sm lg:max-w-96 my-2 text-[#afadad]">
             I design and write maintanable clean, elegant and efficient code
           </p>
-          <button className=" my-1 p-2 font-medium rounded-lg transition  hover:bg-[#f8d95e] bg-[#FACC15] active:bg-[#e9c537] text-gray-600	">
-            Download Resume
-          </button>
+          <Link href='#contact_me' className=" my-3 p-2 font-medium rounded-lg transition  hover:bg-[#f8d95e] bg-[#FACC15] active:bg-[#e9c537] text-gray-600	">
+            Contact Me
+          </Link>
         </section>
         <section className="sm:my-7 ">
           <Image

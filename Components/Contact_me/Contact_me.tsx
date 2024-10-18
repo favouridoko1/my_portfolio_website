@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact_me = () => {
   return (
-    <section className="sm:flex">
+    <section className="sm:flex justify-center ">
       <form action="" className="gap-4 flex flex-col sm:w-[40%] p-4">
         <input
           type="text"
