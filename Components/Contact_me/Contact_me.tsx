@@ -23,10 +23,22 @@ const Contact_me = () => {
         >
           Enter your message please...
         </textarea>
-        <button className="hover:bg-[#f8d95e] bg-[#FACC15] active:bg-[#e9c537] text-[#fff]">Get in touch</button>
+        <button className="hover:bg-[#f8d95e] bg-[#FACC15] p-2 w-fit rounded active:bg-[#e9c537] text-[#fff]">
+          Get in touch
+        </button>
       </form>
       <article className="text-[#fff] p-4">
-        <h1 className="-tracking-2 text-2xl">Let's talk for Something special</h1>
+        <h1 className="-tracking-2 text-2xl tracking-widest">
+          Let's <span>talk</span> for Something special
+        </h1>
+        <p className="text-sm ">
+          I seek to push the limits of creativity to create high-engaging,
+          user-friendly, and <br />
+          memorable interactive experiences
+        </p>
+        <p>ojodomofavour2004@gmail.com</p>
+        <br />
+        <p>( +234 ) 9059852978</p>
       </article>
     </section>
   );
