@@ -61,7 +61,7 @@ const Main = () => {
           <p className="text-sm lg:max-w-96 my-2 text-[#afadad]">
             I design and write maintanable clean, elegant and efficient code
           </p>
-          <Link href='#contact_me' className=" my-3 p-2 font-medium rounded-lg transition  hover:bg-[#f8d95e] bg-[#FACC15] active:bg-[#e9c537] text-gray-600	">
+          <Link href='#contact_me' className=" my-3 p-2 font-medium rounded-md transition  hover:bg-[#f8d95e] bg-[#FACC15] active:bg-[#e9c537] text-gray-600	">
             Contact Me
           </Link>
         </section>

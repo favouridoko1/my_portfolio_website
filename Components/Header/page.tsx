@@ -83,7 +83,7 @@ const Header = () => {
           <Image src={menu_icon} alt="" className=" block md:hidden" />
         </li>
         <li>
-        <Link href='./file_pdf.pdf' target='_blank' alt='My CV' rel="noopener noreferer" className=" my-1 py-1 px-2 font-medium rounded-lg transition  hover:bg-[#f8d95e] bg-[#FACC15] flex items-center gap-1 active:bg-[#e9c537] text-gray-600">
+        <Link href='./file_pdf.pdf' target='_blank' alt='My CV' rel="noopener noreferer" className=" my-1 py-1 px-2 font-medium rounded-md transition  hover:bg-[#f8d95e] bg-[#FACC15] flex items-center gap-1 active:bg-[#e9c537] text-gray-600">
             Resume
             <GoDownload />
           </Link>
