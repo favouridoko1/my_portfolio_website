@@ -2,8 +2,8 @@ import React from "react";
 
 const Contact_me = () => {
   return (
-    <section className="flex">
-      <form action="" className="gap-4 flex flex-col w-[40%] p-4">
+    <section className="sm:flex">
+      <form action="" className="gap-4 flex flex-col sm:w-[40%] p-4">
         <input
           type="text"
           placeholder="Your name"
@@ -27,18 +27,22 @@ const Contact_me = () => {
           Get in touch
         </button>
       </form>
-      <article className="text-[#fff] p-4">
+      <article className="text-[#fff] p-4 flex flex-col gap-3">
         <h1 className="-tracking-2 text-2xl tracking-widest">
           Let's <span>talk</span> for Something special
         </h1>
-        <p className="text-sm ">
+        <p className="text-sm">
           I seek to push the limits of creativity to create high-engaging,
           user-friendly, and <br />
           memorable interactive experiences
         </p>
-        <p>ojodomofavour2004@gmail.com</p>
-        <br />
-        <p>( +234 ) 9059852978</p>
+        <ul className="flex flex-col gap-1">
+          <li className="text-[#FACC15]">ojodomofavour2004@gmail.com</li>
+          {/* <br /> */}
+          <li>
+            <span className="text-[#FACC15]">( +234 )</span> 9059852978
+          </li>
+        </ul>
       </article>
     </section>
   );

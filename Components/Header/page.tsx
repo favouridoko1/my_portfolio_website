@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import { CiLinkedin } from "react-icons/ci";
@@ -5,8 +6,19 @@ import { GrLinkedinOption } from "react-icons/gr";
 import menu_icon from "@/public/menu_icon.svg";
 import linkedIn_icon from "@/public/linkedin_icon.svg";
 import github_icon from "@/public/github_logo.svg";
+let PDF_FILE_URL = 'http://localhost:7000/file_pdf.pdf'
+// 
 
 const Header = () => {
+  const downloadFileAtUrl = (url)=>{
+    const fileName = url.split('/').pop()
+    const aTag = document.createElement('a')
+    aTag.href=url;
+    aTag.setAttribute('download', fileName) 
+    document.body.appendChild(aTag)
+    aTag.click()
+    aTag.remove()
+  }
   return (
     <header className="fixed top-0 left-0 right-0 z-20">
       <ul className="border-b border-[#292929] py-4 flex justify-around items-center bg-[#2b2b2b]">
@@ -68,6 +80,11 @@ const Header = () => {
         </li>
         <li className="">
           <Image src={menu_icon} alt="" className=" block md:hidden" />
+        </li>
+        <li>
+        <button className=" my-1 p-2 font-medium rounded-lg transition  hover:bg-[#f8d95e] bg-[#FACC15] active:bg-[#e9c537] text-gray-600	md:hidden" onClick={()=>downloadFileAtUrl(PDF_FILE_URL)}>
+            Download Resume
+          </button>
         </li>
       </ul>
     </header>

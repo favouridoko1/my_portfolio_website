@@ -60,7 +60,7 @@ const Main = () => {
           <p className="text-sm lg:max-w-96 my-2 text-[#afadad]">
             I design and write maintanable clean, elegant and efficient code
           </p>
-          <button className=" my-1 p-2 font-medium rounded-lg transition hover:bg-[#f8d95e] bg-[#FACC15] active:bg-[#e9c537] text-[#0f0f0f]">
+          <button className=" my-1 p-2 font-medium rounded-lg transition  hover:bg-[#f8d95e] bg-[#FACC15] active:bg-[#e9c537] text-gray-600	">
             Download Resume
           </button>
         </section>
