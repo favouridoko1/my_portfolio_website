@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { myProjectsData } from "@/app/data/data";
 import Image from "next/image";
-import laptop_img from "@/public/laptop_image.svg";
 import { useRouter } from "next/navigation";
 import {
   animate,

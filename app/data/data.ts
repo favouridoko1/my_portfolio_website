@@ -64,21 +64,27 @@ const techStackIcons = [
     description: "NextJs",
   },
 ];
-
-const myProjectsData = [
+const myProjectsData= [
+  // id: number;
+  // laptop_img: any;
+  // chain_icon: any;
+  // github_icon: any;
+  // description: string;
+  // github_repository: string;
+  // live_url:string;
   {
     id: 1,
-    laptop_url: laptop_img,
+    laptop_img: laptop_img,
     chain_icon: chain_img,
     github_icon: github_icon,
     description:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    live_url: "https://movie-website-lyart-mu.vercel.app/",
     github_repository: "https://github.com/favouridoko1/react-app",
+    live_url: "https://movie-website-lyart-mu.vercel.app/",
   },
   {
     id: 2,
-    laptop_url: laptop_img,
+    laptop_img: laptop_img,
     chain_icon: chain_img,
     github_icon: github_icon,
     description:
@@ -88,17 +94,7 @@ const myProjectsData = [
   },
   {
     id: 3,
-    laptop_url: laptop_img,
-    chain_icon: chain_img,
-    github_icon: github_icon,
-    description:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    live_url: "https://flixx-movie-app-jade.vercel.app",
-    github_repository: "https:///github.com/favouridoko1/flixx-movie-app",
-  },
-  {
-    id: 4,
-    laptop_url: laptop_img,
+    laptop_img: laptop_img,
     chain_icon: chain_img,
     github_icon: github_icon,
     description:
@@ -107,8 +103,18 @@ const myProjectsData = [
     github_repository: "https:///github.com/favouridoko1/flixx-movie-app",
   },
   // {
+  //   id: 4,
+  //   laptop_img: laptop_img,
+  //   chain_icon: chain_img,
+  //   github_icon: github_icon,
+  //   description:
+  //     "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+  //   live_url: "https://flixx-movie-app-jade.vercel.app",
+  //   github_repository: "https:///github.com/favouridoko1/flixx-movie-app",
+  // },
+  // {
   //   id: 5,
-  //   laptop_url: laptop_img,
+  //   laptop_img: laptop_img,
   //   chain_icon: chain_img,
   //   github_icon: github_icon,
   //   description:
@@ -118,7 +124,7 @@ const myProjectsData = [
   // },
   // {
   //   id: 6,
-  //   laptop_url: laptop_img,
+  //   laptop_img: laptop_img,
   //   chain_icon: chain_img,
   //   github_icon: github_icon,
   //   description:
@@ -128,7 +134,7 @@ const myProjectsData = [
   // },
   // {
   //   id: 8,
-  //   laptop_url: laptop_img,
+  //   laptop_img: laptop_img,
   //   chain_icon: chain_img,
   //   github_icon: github_icon,
   //   description:
@@ -138,7 +144,7 @@ const myProjectsData = [
   // },
   // {
   //   id: 9,
-  //   laptop_url: laptop_img,
+  //   laptop_img: laptop_img,
   //   chain_icon: chain_img,
   //   github_icon: github_icon,
   //   description:

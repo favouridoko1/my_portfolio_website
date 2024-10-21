@@ -6,12 +6,12 @@ import { GrLinkedinOption } from "react-icons/gr";
 import menu_icon from "@/public/menu_icon.svg";
 import linkedIn_icon from "@/public/linkedin_icon.svg";
 import github_icon from "@/public/github_logo.svg";
-let PDF_FILE_URL = 'http://localhost:7000/file_pdf.pdf'
+// let PDF_FILE_URL = 'http://localhost:7000/file_pdf.pdf'
 import { GoDownload } from "react-icons/go";
 // 
 
 const Header = () => {
-  const downloadFileAtUrl = (url)=>{
+  const downloadFileAtUrl = (url:any)=>{
     const fileName = url.split('/').pop()
     const aTag = document.createElement('a')
     aTag.href=url;
@@ -21,7 +21,7 @@ const Header = () => {
     aTag.remove()
   }
   return (
-    <header className="fixed top-0 left-0 right-0 z-20">
+    <header className="sticky top-0 left-0 right-0 z-20">
       <ul className="border-b border-[#292929] py-4 flex justify-around items-center bg-[#2b2b2b]">
         <li className="text-[#f6f6f6] font-bold text-xl">
           <Link href="/">
@@ -79,14 +79,14 @@ const Header = () => {
             Github
           </Link>
         </li>
-        <li className="">
-          <Image src={menu_icon} alt="" className=" block md:hidden" />
-        </li>
         <li>
-        <Link href='./file_pdf.pdf' target='_blank' alt='My CV' rel="noopener noreferer" className=" my-1 py-1 px-2 font-medium rounded-md transition  hover:bg-[#f8d95e] bg-[#FACC15] flex items-center gap-1 active:bg-[#e9c537] text-gray-600">
+        <Link href='./file_pdf.pdf' target='_blank' rel="noopener noreferer" className=" my-1 py-1 px-2 font-medium rounded-md transition  hover:bg-[#f8d95e] bg-[#FACC15] items-center gap-1 active:bg-[#e9c537] text-gray-600 hidden md:flex">
             Resume
             <GoDownload />
           </Link>
+        </li>
+        <li className="">
+          <Image src={menu_icon} alt="" className=" block md:hidden " />
         </li>
       </ul>
     </header>
