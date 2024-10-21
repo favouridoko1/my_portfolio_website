@@ -60,8 +60,8 @@ const Main = () => {
 
   return (
     <section className="">
-      <nav className="mx-auto text-[#fff] flex flex-col lg:flex-row items-center justify-around my-14 overflow-hidden ">
-        <section className="text-center sm:text-left w-4/5 sm:w-2/4 mt-11">
+      <nav className="mx-auto text-[#fff] flex flex-col lg:flex-row items-center justify-around mt-9 mb-12 overflow-hidden ">
+        <section className="text-center sm:text-left w-4/5 sm:w-2/4 mt-5">
           <h3 className="text-[19px] sm:text-2xl font-bold text-[#EAB308]">
             Hello, I am Favour Idoko,
           </h3>
@@ -108,7 +108,7 @@ const Main = () => {
           ))}
         </ul>
       </section>
-      <section className="my-16 text-[#fff] " id="projects">
+      <section className="my-14 text-[#fff] " id="projects">
         <h3 className="text-center font-bold text-3xl ">PROJECTS</h3>
         <p className="text-center text-md text-lg mb-0">
           Things I’ve built so far
@@ -147,7 +147,7 @@ const Main = () => {
         </main>
       </section>
       <section
-        className="my-16 text-[#fff] flex justify-center items-center flex-col"
+        className="mb-16 text-[#fff] flex justify-center items-center flex-col"
         id="about_me"
       >
         <h1 className="font-bold text-3xl my-4">
@@ -183,8 +183,8 @@ const Main = () => {
           </article>
         </div>
       </section>
-      <section className="w-full" id="contact_me">
-        <h1 className="font-bold text-3xl my-4 text-center text-[#fff]">
+      <section className="w-full " id="contact_me">
+        <h1 className="font-bold text-3xl my-2 text-center text-[#fff]">
           CONTACT <span className="text-[#EAB308]">ME</span>
         </h1>
         <Contact_me />
