@@ -86,7 +86,7 @@ const Header = () => {
           </Link>
         </li>
         <li className="">
-          <Image src={menu_icon} alt="" className=" block md:hidden " />
+          <Image src={menu_icon} alt="" className=" block md:hidden pointer" />
         </li>
       </ul>
     </header>

@@ -15,8 +15,8 @@ const Contact_me = () => {
           className="text-md p-2 rounded outline-none text-[#858585]"
         />
         <textarea
-          rows="4"
-          cols="50"
+          rows={4}
+          cols={50}
           name="comment"
           form="usrform"
           className="text-[#9e9e9e] p-1"
