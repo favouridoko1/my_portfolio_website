@@ -1,81 +1,39 @@
 import type { Config } from "tailwindcss";
+const fonFamily = require("tailwindcss/defaultTheme").fontFamily;
 
 const config: Config = {
-    darkMode: ["class"],
-    content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}', // Update these paths as needed
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-  	extend: {
-  		colors: {
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
-  			card: {
-  				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
-  			},
-  			popover: {
-  				DEFAULT: 'hsl(var(--popover))',
-  				foreground: 'hsl(var(--popover-foreground))'
-  			},
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
-  			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
-  			},
-  			muted: {
-  				DEFAULT: 'hsl(var(--muted))',
-  				foreground: 'hsl(var(--muted-foreground))'
-  			},
-  			accent: {
-  				DEFAULT: 'hsl(var(--accent))',
-  				foreground: 'hsl(var(--accent-foreground))'
-  			},
-  			destructive: {
-  				DEFAULT: 'hsl(var(--destructive))',
-  				foreground: 'hsl(var(--destructive-foreground))'
-  			},
-  			border: 'hsl(var(--border))',
-  			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
-  			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
-  			}
-  		},
-  		animation: {
-  			floating: 'floating 2s ease-in-out infinite'
-  		},
-  		keyframes: {
-  			floating: {
-  				'0%': {
-  					transform: 'translate(0, 0px)'
-  				},
-  				'50%': {
-  					transform: 'translate(0, 10px)'
-  				},
-  				'100%': {
-  					transform: 'translate(0, -0px)'
-  				}
-  			}
-  		},
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		}
-  	}
+    extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      colors: {
+        primary: {
+          dark: "var(--primary-dark)",
+          light: "var(--primary-light)",
+        },
+        secondary: "#CFF480",
+        secondary2: "#FFEDCC",
+        "mint-dark": "#FBE4B9",
+        dark: "#0F0F0F",
+        gray: "#A1A1A1",
+        "gray-main": "#D9D9D9",
+        "mint": "#F5FAFD"
+      },
+      fontFamily: {
+        inter: ["var(--fonts-inter)", ...fonFamily.sans],
+        poppins: ["var(--fonts-poppins)", ...fonFamily.serif],
+        Ordinary: "Ordinary",
+        SF: ["SF", "sans-serif"],
+      }
+    },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
 export default config;
-
-
